@@ -15,7 +15,7 @@
   
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
-            <el-link href="https://github.com/hack-fang/nCov" target="_blank" type="info">Github</el-link>
+            <el-link href="https://github.com/hack-fang/ncov-map" target="_blank" type="info">Github</el-link>
           </b-nav-form>
         </b-navbar-nav>
       </b-navbar>
