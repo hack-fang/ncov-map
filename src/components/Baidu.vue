@@ -31,7 +31,7 @@
 
         <h5>{{item.detail}}</h5>
 
-        <div>来源自:{{item.infoSource}}</div>
+        <div>来源自:<el-link :href="item.sourceUrl" target="_blank" type="primary">{{item.infoSource}}</el-link></div>
       </bm-info-window>
     </bm-marker>
     <bm-city-list class="bm-city-list" anchor="BMAP_ANCHOR_TOP_LEFT" :offset="{width:30,height:90}"></bm-city-list>

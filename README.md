@@ -1,5 +1,9 @@
 # 全国新冠病例小区分布图
 
+## UPDATE 2020.2.9
+
+网页各标记点消息来源支持跳转链接，API接口增加 `sourceUrl` 来源链接字段
+
 
 提供全国范围内的详细数据及来源，同时开放API接口，仅可用于学术科研用途，请勿用于商业用途。可能存在定位不准确问题，烦请告知。
 
@@ -30,7 +34,7 @@
 
 ## 配置
 
-首先需要申请百度地图密钥
+首先需要申请百度地图密钥(似乎不需要也可以运行,可以先不申请)
 
 ### 百度地图AK
 
@@ -88,6 +92,7 @@ npm run build
 | detail |  详细地址 |
 | position  | 百度地图经纬度坐标  |
 | infoSource  | 数据来源  |
+| sourceUrl  | 数据来源链接  |
 |  show |   	可忽略 |
 
 
@@ -118,6 +123,7 @@ npm run build
                 31.87368409239553
             ],
             "infoSource": "合肥市卫生健康委员会",
+            "sourceUrl": "http://wjw.hefei.gov.cn/ztzl/xxgzbdgrdfyyqfk/xxfb/17723463.html",
             "show": false
         },
         {
@@ -131,9 +137,11 @@ npm run build
                 31.878036498537217
             ],
             "infoSource": "合肥市卫生健康委员会",
+            "sourceUrl": "http://wjw.hefei.gov.cn/ztzl/xxgzbdgrdfyyqfk/xxfb/17723463.html",
             "show": false
         },
-       ...
+        ...
+      
     ],
     "success": true
 }
