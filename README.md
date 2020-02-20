@@ -1,11 +1,17 @@
 # 全国新冠病例小区分布图
 
+
+## UPDATE 2020.2.20
+
+API接口增加 `updateTime` 消息更新时间字段，全国疫情情况及新闻等相关接口请参考[完整API](https://github.com/hack-fang/nCov/blob/master/API.md)
+
 ## 数据更新说明
 
 数据每日更新，但由于缺乏数据来源等问题部分地区更新不及时，如发现此问题请提交issue告知
 
 | 更新日期 | 累计总数 |
 | :------------: | :---------: |
+|2020.2.20 | 6828 |
 |2020.2.18 | 6748 |
 |2020.2.18 | 6735 |
 |2020.2.17 | 6688 |
@@ -105,6 +111,7 @@ npm run build
 | position  | 百度地图经纬度坐标  |
 | infoSource  | 数据来源  |
 | sourceUrl  | 数据来源链接  |
+| updateTime  | 更新时间，unxi秒形式  |
 |  show |   	可忽略 |
 
 
@@ -114,7 +121,7 @@ npm run build
 #### 请求
 
 - Method: **GET**
-- URL:```https://lab.ahusmart.com/nCoV/api/detail?city=合肥市&county=蜀山区```
+- URL:```https://lab.ahusmart.com/nCoV/api/detail?city=合肥市&county=庐阳区```
 
 
 #### 响应
@@ -128,32 +135,48 @@ npm run build
             "country": "中国",
             "province": "安徽省",
             "city": "合肥市",
-            "county": "蜀山区",
-            "detail": "蜀山区中央美域A区",
+            "county": "庐阳区",
+            "detail": "庐阳区古城新村",
             "position": [
-                117.24297069728766,
-                31.87368409239553
+                117.26218089149292,
+                31.88207377533681
             ],
             "infoSource": "合肥市卫生健康委员会",
             "sourceUrl": "http://wjw.hefei.gov.cn/ztzl/xxgzbdgrdfyyqfk/xxfb/17723463.html",
+            "updateTime": 1580832000,
             "show": false
         },
         {
             "country": "中国",
             "province": "安徽省",
             "city": "合肥市",
-            "county": "蜀山区",
-            "detail": "蜀山区中铁青秀城",
+            "county": "庐阳区",
+            "detail": "庐阳区探矿厂宿舍",
             "position": [
-                117.25144560882877,
-                31.878036498537217
+                117.29257592382478,
+                31.9112576875506
             ],
             "infoSource": "合肥市卫生健康委员会",
             "sourceUrl": "http://wjw.hefei.gov.cn/ztzl/xxgzbdgrdfyyqfk/xxfb/17723463.html",
+            "updateTime": 1580832000,
             "show": false
         },
-        ...
-      
+        {
+            "country": "中国",
+            "province": "安徽省",
+            "city": "合肥市",
+            "county": "庐阳区",
+            "detail": "庐阳区杏林花园南区",
+            "position": [
+                117.29385649526486,
+                31.900067994996597
+            ],
+            "infoSource": "合肥市卫生健康委员会",
+            "sourceUrl": "http://wjw.hefei.gov.cn/ztzl/xxgzbdgrdfyyqfk/xxfb/17723463.html",
+            "updateTime": 1580832000,
+            "show": false
+        },
+        ....
     ],
     "success": true
 }
