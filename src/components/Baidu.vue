@@ -32,6 +32,7 @@
         <h5>{{item.detail}}</h5>
 
         <div>来源自:<el-link :href="item.sourceUrl" target="_blank" type="primary">{{item.infoSource}}</el-link></div>
+        <p>发布时间:{{getExactTime(item.updateTime)}}</p>
       </bm-info-window>
     </bm-marker>
     <bm-city-list class="bm-city-list" anchor="BMAP_ANCHOR_TOP_LEFT" :offset="{width:30,height:90}"></bm-city-list>
@@ -58,7 +59,19 @@ export default {
       // console.log(index)
 
       this.items[index].show = true;
+    },
+    getExactTime(time) {   
+        var date = new Date(time* 1000);
+        window.console.log(time)
+        var year = date.getFullYear() + '-';
+        var month = (date.getMonth()+1 < 10 ? '0' + (date.getMonth()+1) : date.getMonth()+1) + '-';
+        var dates = (date.getDate() +1 < 10 ? '0' + date.getDate()  : date.getDate() ) ;
+        // var hour = date.getHours() + ':';
+        // var min = date.getMinutes() + ':';
+        // var second = date.getSeconds();
+        return year + month + dates  ;
     }
+
     // getData(){
     //   axios
     //   .get('https://lab.ahusmart.com/nCoV/api/detail?province=北京市')
